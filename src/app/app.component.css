@@ -45,6 +45,11 @@
     width: 210px;
 }
 
+/*mat-drawer-content{*/
+/*    background-image: url("src/assets/background1.jpg") !important;*/
+/*    background-size: cover;*/
+/*}*/
+
 .logo {
     margin-top: 1em;
     width: 70%;
@@ -61,3 +66,4 @@
     /*background: #34be5b;*/
     background: #16446c;
 }
+

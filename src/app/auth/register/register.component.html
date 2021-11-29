@@ -1,1 +1,57 @@
-<p>register works!</p>
+<div class="background">
+    <div class="content">
+        <div class="register-form">
+            <h1>Create account</h1>
+            <form [formGroup]="form">
+                <div class="firstname">
+                    <mat-form-field>
+                        <mat-label>Firstname</mat-label>
+                        <input type="text" matInput formControlName="firstname">
+                    </mat-form-field>
+                </div>
+                <div class="lastname">
+                    <mat-form-field>
+                        <mat-label>Lastname</mat-label>
+                        <input type="text" matInput formControlName="lastname">
+                    </mat-form-field>
+                </div>
+                <div class="email">
+                    <mat-form-field>
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput formControlName="email">
+                    </mat-form-field>
+                </div>
+                <div class="username">
+                    <mat-form-field>
+                        <mat-label>Username</mat-label>
+                        <input type="text" matInput formControlName="username">
+                    </mat-form-field>
+                </div>
+                <div class="password">
+                    <mat-form-field>
+                        <mat-label>Password</mat-label>
+                        <input [type]="passwordShown ? 'text' : 'password'" matInput formControlName="password">
+                        <mat-icon matSuffix
+                                  (click)="showHidePassword()">{{passwordShown ? 'visibility' : 'visibility_off'}}
+                        </mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="repeated-password">
+                    <mat-form-field>
+                        <mat-label>Repeat Password</mat-label>
+                        <input [type]="passwordShown ? 'text' : 'password'" matInput formControlName="repeatedPassword">
+                    </mat-form-field>
+                </div>
+                <div class="have-login">
+                    <span>Already have account?</span><span class="login" routerLink="/login"> Login</span>
+                </div>
+                <div class="register-btn">
+                    <button mat-raised-button>Register
+                        <mat-icon>person_add</mat-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
