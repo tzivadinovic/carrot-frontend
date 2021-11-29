@@ -11,8 +11,10 @@
             <div class="password">
                 <mat-form-field>
                     <mat-label>Password</mat-label>
-                    <input type="password" matInput formControlName="password">
-                    <mat-icon matSuffix>visibility</mat-icon>
+                    <input [type]="passwordShown ? 'text' : 'password'" matInput formControlName="password">
+                    <mat-icon matSuffix
+                              (click)="showHidePassword()">{{passwordShown ? 'visibility' : 'visibility_off'}}
+                    </mat-icon>
                 </mat-form-field>
             </div>
             <div class="no-account">
@@ -27,3 +29,5 @@
         </form>
     </div>
 </div>
+
+<app-footer></app-footer>

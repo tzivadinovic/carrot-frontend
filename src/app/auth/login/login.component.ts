@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
     selector: 'app-login',
@@ -12,10 +12,17 @@ export class LoginComponent implements OnInit {
         password: new FormControl('', null)
     });
 
+    passwordShown: boolean = false;
+
+    showHidePassword(): void {
+        this.passwordShown = !this.passwordShown;
+    }
+
     constructor() {
     }
 
     ngOnInit(): void {
     }
+
 
 }

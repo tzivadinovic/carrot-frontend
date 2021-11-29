@@ -1,0 +1,136 @@
+.row {
+    margin-left: 6%;
+}
+
+.row p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.account {
+    color: white;
+    margin-top: 10px;
+}
+
+.account h1 {
+    font-size: 17px;
+    color: #f18c24;
+}
+
+.account-p {
+    text-align: left;
+}
+
+.sale {
+    color: white;
+    margin-top: 10px;
+}
+
+.sale h1 {
+    font-size: 17px;
+    color: #f18c24;
+}
+
+.sale-p {
+    text-align: left;
+}
+
+.need-help {
+    color: white;
+    margin-top: 10px;
+}
+
+.need-help h1 {
+    font-size: 17px;
+    color: #f18c24;
+}
+
+.need-help-p {
+    text-align: left;
+}
+
+.payment-and-shipping {
+    color: white;
+    margin-top: 10px;
+}
+
+.payment-and-shipping h1 {
+    font-size: 17px;
+    color: #f18c24;
+}
+
+.payment-and-shipping-p {
+    text-align: left;
+}
+
+.shopping {
+    color: white;
+    margin-top: 10px;
+}
+
+.shopping h1 {
+    font-size: 17px;
+    color: #f18c24;
+}
+
+.shopping-p {
+    text-align: left;
+}
+
+.about-carrot {
+    color: white;
+    margin-top: 10px;
+}
+
+.about-carrot h1 {
+    font-size: 17px;
+    color: #f18c24;
+}
+
+.about-carrot-p {
+    text-align: left;
+}
+
+.newsletter {
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 6%;
+    width: 300px;
+}
+
+.newsletter h1 {
+    color: white;
+}
+
+::ng-deep .newsletter .mat-form-field-infix {
+    color: black;
+    background-color: white !important;
+}
+
+mat-label {
+    color: black !important;
+    top: 13px !important;
+}
+
+.newsletter button {
+    margin-left: 1px;
+    position: absolute;
+    border-radius: 0;
+    background-color: #f18c24 !important;
+    color: white;
+    height: 40px;
+    animation: ease-in-out;
+    transition: .2s;
+}
+
+.newsletter button:hover {
+    background-color: white !important;
+    color: #f18c24 !important;
+    transition: .2s;
+}
+
+::ng-deep .newsletter .mat-form-field-label-wrapper {
+    left: 10px;
+    top: -15px !important;
+}
