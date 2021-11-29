@@ -24,6 +24,7 @@ import { ProductCardComponent } from './products/product-card/product-card.compo
 import {MatCardModule} from "@angular/material/card";
 import {MatMenuModule} from "@angular/material/menu";
 import { ProductCategoryComponent } from './products/product-category/product-category.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -66,7 +67,8 @@ const routes: Routes = [
         MatIconModule,
         MatCardModule,
         RouterModule.forRoot(routes),
-        MatMenuModule
+        MatMenuModule,
+        ReactiveFormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

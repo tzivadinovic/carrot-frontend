@@ -1,1 +1,29 @@
-<p>login works!</p>
+<div class="content">
+    <div class="login-form">
+        <h1>Login</h1>
+        <form [formGroup]="form">
+            <div class="username">
+                <mat-form-field>
+                    <mat-label>Username</mat-label>
+                    <input type="text" matInput formControlName="username">
+                </mat-form-field>
+            </div>
+            <div class="password">
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput formControlName="password">
+                    <mat-icon matSuffix>visibility</mat-icon>
+                </mat-form-field>
+            </div>
+            <div class="no-account">
+                <span>No account?</span><span class="register"> Register</span>
+            </div>
+            <span class="reset-password">Reset password</span>
+            <div class="login-btn">
+                <button mat-raised-button>Login
+                    <mat-icon>login</mat-icon>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

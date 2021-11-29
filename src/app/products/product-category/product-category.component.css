@@ -1,18 +1,18 @@
-.content{
+.content {
     padding-top: 3em;
     padding-left: 5em;
     padding-right: 5em;
 }
 
-.sub-categories{
+.sub-categories {
     margin-bottom: 2em;
 }
 
-.menu{
+.menu {
     text-align: right;
 }
 
-.menu mat-form-field{
+.menu mat-form-field {
     display: block;
 }
 
@@ -20,7 +20,7 @@
     font-size: 18px;
 }
 
-.menu mat-icon{
+.menu mat-icon {
     font-size: 25px;
     margin-top: -3px;
 }

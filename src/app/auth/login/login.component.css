@@ -1,0 +1,88 @@
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.login-form {
+    transform: translateY(calc(50vh - 70%));
+    background-color: #2E3440;
+    padding: 5em;
+    border-radius: 5px;
+    color: white;
+}
+
+mat-form-field {
+    min-width: 25em;
+}
+
+.login-btn {
+    text-align: right;
+}
+
+.login-form h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.reset-password {
+    font-style: italic;
+    /*color: #f18c24;*/
+    cursor: pointer;
+    color: #f18c24;
+}
+
+.no-account{
+    margin-bottom: 10px;
+}
+
+.register{
+    font-style: italic;
+    cursor: pointer;
+    color: #f18c24;
+}
+
+.register:hover{
+    text-decoration: underline;
+}
+
+.reset-password:hover {
+    text-decoration: underline;
+}
+
+.login-btn button {
+    background-color: #f18c24;
+    font-size: 17px;
+    animation: ease-in-out;
+    transition: .2s;
+}
+
+.login-btn button:hover {
+    background-color: white;
+    transition: .2s;
+}
+
+mat-form-field mat-icon {
+    cursor: pointer;
+}
+::ng-deep .mat-form-field-underline {
+    background-color: #ffffff !important;
+}
+
+::ng-deep .mat-form-field-label{
+    color: white !important;
+}
+
+::ng-deep .mat-form-field-underline:focus {
+    background-color: #ffffff !important;
+}
+
+::ng-deep .mat-form-field-ripple{
+    background-color: white !important;
+}
+
+::ng-deep mat-form-field input{
+    caret-color: white !important;
+}
+
