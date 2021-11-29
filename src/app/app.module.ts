@@ -23,6 +23,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductCardComponent } from './products/product-card/product-card.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatMenuModule} from "@angular/material/menu";
+import { ProductCategoryComponent } from './products/product-category/product-category.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -52,6 +53,7 @@ const routes: Routes = [
     RegisterComponent,
     HomeComponent,
     ProductCardComponent,
+    ProductCategoryComponent,
   ],
     imports: [
         BrowserModule,
