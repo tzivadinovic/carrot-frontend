@@ -29,7 +29,6 @@
     color: white !important;
     cursor: pointer;
     font-size: 20px !important;
-    font-family: Omnes, sans-serif;
     animation: ease-in-out;
     transition: .2s;
 }
