@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-product-category',
-  templateUrl: './product-category.component.html',
-  styleUrls: ['./product-category.component.css']
+    selector: 'app-product-category',
+    templateUrl: './product-category.component.html',
+    styleUrls: ['./product-category.component.css']
 })
 export class ProductCategoryComponent implements OnInit {
+    filterPanelOpenState: boolean = false;
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
+    toggleFilterPanel() {
+        this.filterPanelOpenState = !this.filterPanelOpenState;
+    }
+
+    applyFilters() {
+        this.filterPanelOpenState = false;
+    }
 }

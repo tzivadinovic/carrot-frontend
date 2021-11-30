@@ -1,12 +1,17 @@
 <div class="card">
     <mat-card>
-<!--        <img src="https://source.unsplash.com/random/280x200" alt="">-->
+        <!--        <img src="https://source.unsplash.com/random/280x200" alt="">-->
         <img src="assets/testproduct.jpeg" alt="">
-        <h3>Test name</h3>
-        <h5>Random text</h5>
+        <h3>Lorem ipsum dolor sit amet consectetur</h3>
+        <mat-icon class="favorite-heart" (click)="addRemoveFromFavorites()">
+            {{favorite ? 'favorite' : 'favorite_border'}}
+        </mat-icon>
         <div class="price">
-            <h2><span class="dollar">&dollar;</span><span> 418</span><span class="price-decimal">.00</span></h2>
+            <h2><span class="dollar">&dollar;</span><span class="price-big"> 418</span><span
+                    class="price-decimal">.00</span></h2>
         </div>
-        <button mat-flat-button><span>Add to cart</span><mat-icon>add_shopping_cart</mat-icon></button>
+        <button mat-flat-button><span>Add to cart</span>
+            <mat-icon>add_shopping_cart</mat-icon>
+        </button>
     </mat-card>
 </div>

@@ -1,13 +1,16 @@
-@font-face {
-    font-family: 'Omnes';
-    src: url('../../../fonts/OmnesLatin-SemiBold-2ee0127433dca84e1c23.woff2');
-}
-
 .card {
     text-align: center;
     animation: ease-in-out;
     transition: .3s;
     margin-bottom: 1.5em;
+}
+
+.card h3{
+    font-family: "Omnes Light", sans-serif !important;
+}
+
+.card .favorite-heart {
+    color: red;
 }
 
 .card img {
@@ -35,7 +38,6 @@ mat-card button {
     background-color: #f18c24;
     vertical-align: middle;
     color: white;
-    border-radius: 3%;
     animation: ease-in-out;
     transition: .5s;
 }
@@ -54,8 +56,9 @@ mat-card button span {
     font-size: 25px;
 }
 
-.price-decimal{
+.price-decimal {
     font-size: 15px;
 }
+
 
 

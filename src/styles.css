@@ -9,6 +9,11 @@
     src: url('fonts/OmnesLatin-SemiBold-2ee0127433dca84e1c23.woff2');
 }
 
+@font-face {
+    font-family: 'Omnes Light';
+    src: url('fonts/OmnesLatin-Light.ttf');
+}
+
 html, body {
     height: 100%;
 }
@@ -17,7 +22,7 @@ body {
     margin: 0;
 }
 
-.material-icons{
+.material-icons {
     font-family: 'Material Icons', sans-serif !important;
 }
 

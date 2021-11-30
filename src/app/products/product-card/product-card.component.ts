@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-product-card',
-  templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.css']
+    selector: 'app-product-card',
+    templateUrl: './product-card.component.html',
+    styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent implements OnInit {
 
-  constructor() { }
+    favorite: boolean = false;
 
-  ngOnInit(): void {
-  }
+    addRemoveFromFavorites(): void {
+        this.favorite = !this.favorite;
+    }
+
+    constructor() {
+    }
+
+    ngOnInit(): void {
+    }
 
 }

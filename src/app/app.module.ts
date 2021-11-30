@@ -34,7 +34,9 @@ import {AdminNetworkComponent} from './admin/products/admin-network/admin-networ
 import {AdminPcComponentsComponent} from './admin/products/admin-pc-components/admin-pc-components.component';
 import {AdminPeripheralsComponent} from './admin/products/admin-peripherals/admin-peripherals.component';
 import {AdminSmartphonesComponent} from './admin/products/admin-smartphones/admin-smartphones.component';
-import {UsersComponent} from './admin/users/users.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -50,6 +52,7 @@ const routes: Routes = [
     {path: 'smartphones', component: SmartphonesComponent},
     // ADMIN
     {path: 'admin', component: AdminComponent},
+    {path: 'admin/dashboard', component: DashboardComponent},
     {path: 'admin/electronics', component: AdminElectronicsComponent},
     {path: 'admin/gaming', component: AdminGamingComponent},
     {path: 'admin/laptops', component: AdminLaptopsComponent},
@@ -57,7 +60,6 @@ const routes: Routes = [
     {path: 'admin/components', component: AdminPcComponentsComponent},
     {path: 'admin/peripherals', component: AdminPeripheralsComponent},
     {path: 'admin/smartphones', component: AdminSmartphonesComponent},
-    {path: 'admin/users', component: UsersComponent},
 
     {path: '**', redirectTo: ''}
 ];
@@ -86,7 +88,7 @@ const routes: Routes = [
         AdminPcComponentsComponent,
         AdminPeripheralsComponent,
         AdminSmartphonesComponent,
-        UsersComponent,
+        DashboardComponent,
     ],
     imports: [
         RouterModule.forRoot(routes),
@@ -100,7 +102,9 @@ const routes: Routes = [
         MatIconModule,
         MatCardModule,
         MatMenuModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatExpansionModule,
+        MatCheckboxModule
     ],
     providers: [],
     bootstrap: [AppComponent]
