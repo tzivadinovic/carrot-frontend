@@ -45,11 +45,6 @@
     width: 210px;
 }
 
-/*mat-drawer-content{*/
-/*    background-image: url("src/assets/background1.jpg") !important;*/
-/*    background-size: cover;*/
-/*}*/
-
 .logo {
     margin-top: 1em;
     width: 70%;
@@ -61,9 +56,13 @@
     bottom: 0;
 }
 
+::ng-deep .menu-list .menu-list-item.admin {
+    position: absolute;
+    bottom: 60px;
+}
+
 ::ng-deep ::selection {
     color: white;
-    /*background: #34be5b;*/
-    background: #16446c;
+    background: #2E3440;
 }
 

@@ -4,6 +4,10 @@
     padding-right: 5em;
 }
 
+.category-name h1 {
+    font-size: 3em;
+}
+
 .sub-categories {
     margin-bottom: 2em;
 }
@@ -28,4 +32,33 @@
 .sub-categories button {
     background-color: #5c953f;
     color: white;
+}
+
+app-footer {
+    background-color: #2E3440;
+    position: absolute;
+    left: 0;
+    /*bottom: 0;*/
+    width: 100%;
+    overflow: hidden;
+}
+
+::ng-deep .menu .mat-form-field-underline {
+    background-color: black !important;
+}
+
+::ng-deep .menu .mat-form-field-label {
+    color: black !important;
+}
+
+::ng-deep .menu .mat-form-field-underline:focus {
+    background-color: black !important;
+}
+
+::ng-deep .menu .mat-form-field-ripple {
+    background-color: black !important;
+}
+
+::ng-deep .menu mat-form-field input {
+    caret-color: black !important;
 }

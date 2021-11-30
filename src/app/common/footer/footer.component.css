@@ -10,7 +10,7 @@
 
 .account {
     color: white;
-    margin-top: 10px;
+    margin-top: 2.5em;
 }
 
 .account h1 {
@@ -24,7 +24,7 @@
 
 .sale {
     color: white;
-    margin-top: 10px;
+    margin-top: 2.5em;
 }
 
 .sale h1 {
@@ -38,7 +38,7 @@
 
 .need-help {
     color: white;
-    margin-top: 10px;
+    margin-top: 2.5em;
 }
 
 .need-help h1 {
@@ -52,7 +52,7 @@
 
 .payment-and-shipping {
     color: white;
-    margin-top: 10px;
+    margin-top: 2.5em;
 }
 
 .payment-and-shipping h1 {
@@ -66,7 +66,7 @@
 
 .shopping {
     color: white;
-    margin-top: 10px;
+    margin-top: 2.5em;
 }
 
 .shopping h1 {
@@ -80,7 +80,7 @@
 
 .about-carrot {
     color: white;
-    margin-top: 10px;
+    margin-top: 2.5em;
 }
 
 .about-carrot h1 {
@@ -93,14 +93,25 @@
 }
 
 .newsletter {
-    padding: 10px;
     margin-top: 10px;
-    margin-left: 6%;
-    width: 300px;
+}
+
+.news {
+    margin-top: -2.5%;
 }
 
 .newsletter h1 {
     color: white;
+}
+
+.news-social {
+    margin-top: 2%;
+    margin-right: 5.5%;
+}
+
+.social {
+    text-align: right;
+    margin-top: 8px;
 }
 
 ::ng-deep .newsletter .mat-form-field-infix {
@@ -134,3 +145,25 @@ mat-label {
     left: 10px;
     top: -15px !important;
 }
+
+.social-icon {
+    padding: 5px;
+    width: 50px;
+    animation: ease-in-out;
+    transition: .2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+.banks{
+    text-align: center;
+}
+
+.banks img {
+    padding: 5px;
+}
+
+

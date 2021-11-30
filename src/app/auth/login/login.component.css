@@ -12,7 +12,7 @@
 }
 
 .login-form {
-    transform: translateY(calc(50vh - 70%));
+    transform: translateY(calc(50vh - 50%));
     background-color: #2E3440;
     padding: 5em;
     border-radius: 5px;
@@ -73,23 +73,23 @@ mat-form-field mat-icon {
     cursor: pointer;
 }
 
-::ng-deep .mat-form-field-underline {
+::ng-deep .login-form .mat-form-field-underline {
     background-color: #ffffff !important;
 }
 
-::ng-deep .mat-form-field-label {
+::ng-deep .login-form .mat-form-field-label {
     color: white !important;
 }
 
-::ng-deep .mat-form-field-underline:focus {
+::ng-deep .login-form .mat-form-field-underline:focus {
     background-color: #ffffff !important;
 }
 
-::ng-deep .mat-form-field-ripple {
+::ng-deep .login-form .mat-form-field-ripple {
     background-color: white !important;
 }
 
-::ng-deep mat-form-field input {
+::ng-deep .login-form mat-form-field input {
     caret-color: white !important;
 }
 
@@ -100,6 +100,6 @@ app-footer {
     bottom: 0;
     width: 100%;
     overflow: hidden;
-    margin-bottom: -190px;
+    margin-bottom: -312px;
 }
 

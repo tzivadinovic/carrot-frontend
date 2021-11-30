@@ -2,7 +2,7 @@
     <div class="sub-categories">
         <div class="row">
             <div class="col-md-12 col-lg-4 category-name">
-                <h1>Electronics</h1>
+                <h1>ELECTRONICS</h1>
             </div>
             <div class="col-md-12 col-lg-4 menu">
                 <mat-form-field appearance="fill">
@@ -11,13 +11,14 @@
                 </mat-form-field>
             </div>
             <div class="col-md-12 col-lg-4 menu">
-                <button mat-button [matMenuTriggerFor]="menu">All electronics <mat-icon>apps</mat-icon></button>
+                <button mat-button [matMenuTriggerFor]="menu">ALL ELECTRONICS <mat-icon>apps</mat-icon></button>
             </div>
         </div>
 
         <mat-menu #menu="matMenu">
-            <button mat-menu-item>Item 1</button>
-            <button mat-menu-item>Item 2</button>
+            <button mat-menu-item>TVs</button>
+            <button mat-menu-item>Audio</button>
+            <button mat-menu-item>Video</button>
         </mat-menu>
     </div>
     <div class="row">
@@ -33,4 +34,6 @@
         <div class="col-md-12 col-lg-6 col-xl-3"><app-product-card></app-product-card></div>
     </div>
 </div>
+<app-footer></app-footer>
+
 

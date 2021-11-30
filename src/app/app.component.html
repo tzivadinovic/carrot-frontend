@@ -6,6 +6,10 @@
                 <mat-icon mat-list-icon>{{menuItem.icon}}</mat-icon>
                 <div mat-line>{{menuItem.title}}</div>
             </mat-list-item>
+            <mat-list-item class="menu-list-item admin">
+                <mat-icon mat-list-icon>manage_accounts</mat-icon>
+                <div routerLink="/admin" mat-line>Admin</div>
+            </mat-list-item>
             <mat-list-item class="menu-list-item logout">
                 <mat-icon mat-list-icon>login</mat-icon>
                 <div routerLink="/login" mat-line>Login</div>
