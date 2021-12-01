@@ -1,8 +1,4 @@
 <div class="main-content">
-    <mat-form-field class="search-field">
-        <mat-label>Search...</mat-label>
-        <input matInput type="text">
-    </mat-form-field>
     <div>
         <table mat-table [dataSource]="dataSource">
 
@@ -29,10 +25,6 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-        <mat-paginator [pageSizeOptions]="[15, 10, 20]"
-                       showFirstLastButtons
-                       aria-label="Select page of periodic elements" class="paginator">
-        </mat-paginator>
     </div>
     <button class="color-secondary add-btn" mat-fab id="button2">
         <mat-icon>add</mat-icon>

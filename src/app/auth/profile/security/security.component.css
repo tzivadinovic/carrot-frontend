@@ -1,0 +1,92 @@
+.background {
+    background-image: url("src/assets/background1.jpg") !important;
+    background-size: cover;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 5% auto;
+}
+
+.change-password-form {
+    padding: 5em;
+    border-radius: 5px;
+}
+
+mat-form-field {
+    min-width: 25em;
+}
+
+.register-btn {
+    text-align: right;
+}
+
+.change-password-form h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.register {
+    font-style: italic;
+    cursor: pointer;
+    color: #f18c24;
+}
+
+.register:hover {
+    text-decoration: underline;
+}
+
+.reset-password:hover {
+    text-decoration: underline;
+}
+
+.save-btn {
+    text-align: right;
+}
+
+.save-btn button {
+    background-color: #f18c24;
+    color: white;
+    animation: ease-in-out;
+    transition: .2s;
+    box-shadow: none;
+}
+
+.save-btn button:hover {
+    background-color: transparent;
+    color: #f18c24;
+    transition: .2s;
+}
+
+mat-form-field mat-icon {
+    cursor: pointer;
+}
+
+app-footer {
+    background-color: #2E3440;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: -190px;
+}
+
+.have-login {
+    margin-bottom: 10px;
+}
+
+.login {
+    font-style: italic;
+    cursor: pointer;
+    color: #f18c24;
+}
+
+.login:hover {
+    text-decoration: underline;
+}
+

@@ -44,9 +44,17 @@ import { EntityTableComponent } from './admin/dashboard/entity-table/entity-tabl
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import { ProfileComponent } from './auth/profile/profile.component';
+import { EditProfileComponent } from './auth/profile/edit-profile/edit-profile.component';
+import { MyOrdersComponent } from './auth/profile/my-orders/my-orders.component';
+import { SecurityComponent } from './auth/profile/security/security.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
+import { AddressesComponent } from './auth/profile/addresses/addresses.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
+    {path: 'profile', component: ProfileComponent},
     // USER
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
@@ -99,6 +107,11 @@ const routes: Routes = [
         DashboardComponent,
         ShoppingCartComponent,
         EntityTableComponent,
+        ProfileComponent,
+        EditProfileComponent,
+        MyOrdersComponent,
+        SecurityComponent,
+        AddressesComponent,
     ],
     imports: [
         RouterModule.forRoot(routes),
@@ -119,7 +132,9 @@ const routes: Routes = [
         MatTabsModule,
         MatTableModule,
         MatPaginatorModule,
-        MatTooltipModule
+        MatTooltipModule,
+        MatDatepickerModule,
+        MatNativeDateModule
     ],
     providers: [],
     bootstrap: [AppComponent]

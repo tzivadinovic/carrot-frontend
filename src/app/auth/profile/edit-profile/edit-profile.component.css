@@ -1,0 +1,80 @@
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 5% auto;
+}
+
+.main-content form {
+    padding: 5em;
+    color: white;
+}
+
+.main-content mat-form-field {
+    width: 300px;
+}
+
+.profile-photo img {
+    display: block;
+}
+
+.profile-photo {
+    text-align: center;
+}
+
+.profile-photo button{
+    margin-top: 1em;
+}
+
+.save-btn {
+    text-align: right;
+}
+
+.save-btn button {
+    background-color: #f18c24;
+    color: white;
+    animation: ease-in-out;
+    transition: .2s;
+    box-shadow: none;
+}
+
+.save-btn button:hover {
+    background-color: transparent;
+    color: #f18c24;
+    transition: .2s;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background: none;
+}
+
+::ng-deep .birthdate .mat-form-field-infix {
+    margin-left: -10px !important;
+    color: black !important;
+}
+
+::ng-deep .mat-form-field-underline {
+    background-color: black !important;
+}
+
+::ng-deep .mat-form-field-label {
+    color: black !important;
+}
+
+::ng-deep .mat-form-field-underline:focus {
+    background-color: black !important;
+}
+
+::ng-deep .mat-form-field-ripple {
+    background-color: black !important;
+}
+
+::ng-deep mat-form-field input {
+    caret-color: black !important;
+}
+
+::ng-deep .birthdate .mat-form-field-appearance-fill .mat-form-field-underline::before {
+    background-color: black !important;
+}
+
