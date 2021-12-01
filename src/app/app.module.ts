@@ -37,6 +37,8 @@ import {AdminSmartphonesComponent} from './admin/products/admin-smartphones/admi
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatBadgeModule} from "@angular/material/badge";
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -50,6 +52,7 @@ const routes: Routes = [
     {path: 'components', component: PcComponentsComponent},
     {path: 'peripherals', component: PeripheralsComponent},
     {path: 'smartphones', component: SmartphonesComponent},
+    {path: 'cart', component: ShoppingCartComponent},
     // ADMIN
     {path: 'admin', component: AdminComponent},
     {path: 'admin/dashboard', component: DashboardComponent},
@@ -89,6 +92,7 @@ const routes: Routes = [
         AdminPeripheralsComponent,
         AdminSmartphonesComponent,
         DashboardComponent,
+        ShoppingCartComponent,
     ],
     imports: [
         RouterModule.forRoot(routes),
@@ -104,7 +108,8 @@ const routes: Routes = [
         MatMenuModule,
         ReactiveFormsModule,
         MatExpansionModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatBadgeModule
     ],
     providers: [],
     bootstrap: [AppComponent]

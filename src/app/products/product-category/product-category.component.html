@@ -17,12 +17,15 @@
                 <button mat-button [matMenuTriggerFor]="menu">ALL ELECTRONICS
                     <mat-icon>apps</mat-icon>
                 </button>
+                <button mat-button class="cart-btn" matBadge="7" [matBadgeHidden]="hidden" routerLink="/cart">
+                    <mat-icon>shopping_cart</mat-icon>
+                </button>
             </div>
         </div>
         <mat-expansion-panel hideToggle class="mat-elevation-z0" [expanded]="filterPanelOpenState">
             <mat-expansion-panel-header>
                 <mat-panel-title>
-<!--                    This is the expansion title-->
+                    <!--                    This is the expansion title-->
                 </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="filters-content">
@@ -48,7 +51,9 @@
                 </div>
             </div>
             <div class="apply-btn">
-                <button mat-raised-button (click)="applyFilters()">APPLY <mat-icon>done</mat-icon></button>
+                <button mat-raised-button (click)="applyFilters()">APPLY
+                    <mat-icon>done</mat-icon>
+                </button>
             </div>
         </mat-expansion-panel>
         <mat-menu #menu="matMenu">
