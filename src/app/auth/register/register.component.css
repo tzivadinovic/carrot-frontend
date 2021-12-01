@@ -12,7 +12,7 @@
 }
 
 .register-form {
-    transform: translateY(calc(50vh - 60%));
+    transform: translateY(calc(50vh - 50%));
     background-color: #2E3440;
     padding: 5em;
     border-radius: 5px;
@@ -89,7 +89,7 @@ app-footer {
     bottom: 0;
     width: 100%;
     overflow: hidden;
-    margin-bottom: -190px;
+    margin-bottom: -312px;
 }
 
 .have-login {

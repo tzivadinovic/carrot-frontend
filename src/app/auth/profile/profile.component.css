@@ -1,9 +1,9 @@
-.main-content h1 {
+.main-content-profile h1 {
     padding: 5rem;
     font-size: 4em;
 }
 
-::ng-deep .mat-tab-labels {
+::ng-deep .main-content-profile .mat-tab-labels {
     margin-left: 30%;
 }
 

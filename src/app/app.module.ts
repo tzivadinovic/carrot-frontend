@@ -51,10 +51,12 @@ import { SecurityComponent } from './auth/profile/security/security.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import { AddressesComponent } from './auth/profile/addresses/addresses.component';
+import { ResetPasswordComponent } from './auth/login/reset-password/reset-password.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'profile', component: ProfileComponent},
+    {path: 'reset-password', component: ResetPasswordComponent},
     // USER
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
@@ -112,6 +114,7 @@ const routes: Routes = [
         MyOrdersComponent,
         SecurityComponent,
         AddressesComponent,
+        ResetPasswordComponent,
     ],
     imports: [
         RouterModule.forRoot(routes),
