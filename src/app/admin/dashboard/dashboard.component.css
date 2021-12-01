@@ -1,0 +1,7 @@
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background-color: #f18c24 !important;
+}
+
+::ng-deep .mat-tab-body-content {
+    overflow-y: hidden !important;
+}

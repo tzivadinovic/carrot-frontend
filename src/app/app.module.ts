@@ -39,6 +39,11 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatBadgeModule} from "@angular/material/badge";
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import {MatTabsModule} from "@angular/material/tabs";
+import { EntityTableComponent } from './admin/dashboard/entity-table/entity-table.component';
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -93,6 +98,7 @@ const routes: Routes = [
         AdminSmartphonesComponent,
         DashboardComponent,
         ShoppingCartComponent,
+        EntityTableComponent,
     ],
     imports: [
         RouterModule.forRoot(routes),
@@ -109,7 +115,11 @@ const routes: Routes = [
         ReactiveFormsModule,
         MatExpansionModule,
         MatCheckboxModule,
-        MatBadgeModule
+        MatBadgeModule,
+        MatTabsModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatTooltipModule
     ],
     providers: [],
     bootstrap: [AppComponent]

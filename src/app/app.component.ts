@@ -13,7 +13,7 @@ export class AppComponent {
     @ViewChild('sidenav', {static: false}) sidenav: MatSidenav | undefined;
     menuItems: IMenuItem[] = [];
     opened: boolean = false;
-    user: string = 'user';
+    user: string = 'admin';
 
     ngDoCheck(): void {
         if (window.location.pathname === '' || window.innerWidth < 600) {
