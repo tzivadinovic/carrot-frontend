@@ -1,1 +1,44 @@
-<p>shopping-cart works!</p>
+<div class="main-content">
+    <!--    <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">-->
+    <!--        {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}-->
+    <!--    </button>-->
+    <div class="title">
+        <h1>Complete your order</h1>
+    </div>
+    <button mat-button class="go-back-btn">Go back <mat-icon>arrow_back</mat-icon></button>
+    <mat-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup" label="Cart items">
+            <!--            <form [formGroup]="firstFormGroup">-->
+            <!--                <div>-->
+            <!--                    <button mat-button matStepperNext>Next</button>-->
+            <!--                </div>-->
+            <!--            </form>-->
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Shipping method">
+            <!--            <form [formGroup]="secondFormGroup">-->
+            <!--                <div>-->
+            <!--                    <button mat-button matStepperPrevious>Back</button>-->
+            <!--                    <button mat-button matStepperNext>Next</button>-->
+            <!--                </div>-->
+            <!--            </form>-->
+        </mat-step>
+        <mat-step label="Customer info">
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+        </mat-step>
+        <mat-step label="Payment method">
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+        </mat-step>
+        <mat-step label="Summary">
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+        </mat-step>
+    </mat-stepper>
+</div>

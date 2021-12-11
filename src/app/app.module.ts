@@ -52,6 +52,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import { AddressesComponent } from './auth/profile/addresses/addresses.component';
 import { ResetPasswordComponent } from './auth/login/reset-password/reset-password.component';
+import {MatStepperModule} from "@angular/material/stepper";
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -137,7 +138,8 @@ const routes: Routes = [
         MatPaginatorModule,
         MatTooltipModule,
         MatDatepickerModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        MatStepperModule
     ],
     providers: [],
     bootstrap: [AppComponent]

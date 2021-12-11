@@ -1,0 +1,31 @@
+.main-content {
+    margin: 5em auto;
+    width: 80%;
+}
+
+.main-content mat-stepper {
+    height: 55em;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.title h1 {
+    font-size: 3em;
+}
+
+.go-back-btn {
+    background-color: #f18c24 !important;
+    color: white;
+    margin-bottom: 0.5em;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+    background-color: #5c953f !important;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-state-edit {
+    background-color: #5c953f !important;
+}
