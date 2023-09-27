@@ -23,8 +23,7 @@ import {HomeComponent} from './home/home.component';
 import {ProductCardComponent} from './products/product-card/product-card.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatMenuModule} from "@angular/material/menu";
-import {ProductCategoryComponent} from './products/product-category/product-category.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {FooterComponent} from './common/footer/footer.component';
 import {AdminComponent} from './admin/admin.component';
 import {AdminElectronicsComponent} from './admin/products/admin-electronics/admin-electronics.component';
@@ -34,25 +33,49 @@ import {AdminNetworkComponent} from './admin/products/admin-network/admin-networ
 import {AdminPcComponentsComponent} from './admin/products/admin-pc-components/admin-pc-components.component';
 import {AdminPeripheralsComponent} from './admin/products/admin-peripherals/admin-peripherals.component';
 import {AdminSmartphonesComponent} from './admin/products/admin-smartphones/admin-smartphones.component';
-import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import {DashboardComponent} from './admin/dashboard/dashboard.component';
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatBadgeModule} from "@angular/material/badge";
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import {ShoppingCartComponent} from './shopping-cart/shopping-cart.component';
 import {MatTabsModule} from "@angular/material/tabs";
-import { EntityTableComponent } from './admin/dashboard/entity-table/entity-table.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTooltipModule} from "@angular/material/tooltip";
-import { ProfileComponent } from './auth/profile/profile.component';
-import { EditProfileComponent } from './auth/profile/edit-profile/edit-profile.component';
-import { MyOrdersComponent } from './auth/profile/my-orders/my-orders.component';
-import { SecurityComponent } from './auth/profile/security/security.component';
+import {ProfileComponent} from './auth/profile/profile.component';
+import {EditProfileComponent} from './auth/profile/edit-profile/edit-profile.component';
+import {MyOrdersComponent} from './auth/profile/my-orders/my-orders.component';
+import {SecurityComponent} from './auth/profile/security/security.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
-import { AddressesComponent } from './auth/profile/addresses/addresses.component';
-import { ResetPasswordComponent } from './auth/login/reset-password/reset-password.component';
+import {AddressesComponent} from './auth/profile/addresses/addresses.component';
+import {ResetPasswordComponent} from './auth/login/reset-password/reset-password.component';
 import {MatStepperModule} from "@angular/material/stepper";
+import {UsersComponent} from "./admin/users/users.component";
+import {MatDialogModule} from "@angular/material/dialog";
+import {HttpClientModule} from "@angular/common/http";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {CreateUserDialogComponent} from "./admin/users/dialogs/create-user-dialog/create-user-dialog.component";
+import {EditUserDialogComponent} from './admin/users/dialogs/edit-user-dialog/edit-user-dialog.component';
+import {DeleteDialogComponent} from './common/dialogs/delete-dialog/delete-dialog.component';
+import {CategoriesComponent} from './admin/categories/categories.component';
+import {
+    CreateCategoryDialogComponent
+} from './admin/categories/dialogs/create-category-dialog/create-category-dialog.component';
+import {
+    EditCategoryDialogComponent
+} from './admin/categories/dialogs/edit-category-dialog/edit-category-dialog.component';
+import {CitiesComponent} from './admin/cities/cities.component';
+import {CountriesComponent} from './admin/countries/countries.component';
+import {MunicipalitiesComponent} from './admin/municipalities/municipalities.component';
+import {SubCategoriesComponent} from './admin/sub-categories/sub-categories.component';
+import {ProductBrandsComponent} from "./admin/products/product-brands/product-brands.component";
+import {ProductModelsComponent} from "./admin/products/product-models/product-models.component";
+import {ProductCategoryComponent} from './admin/products/product-category/product-category.component';
+import { EditCountryDialogComponent } from './admin/countries/dialogs/edit-country-dialog/edit-country-dialog.component';
+import { CreateCountryDialogComponent } from './admin/countries/dialogs/create-country-dialog/create-country-dialog.component';
+import { CreateMunicipalityDialogComponent } from './admin/municipalities/dialogs/create-municipality-dialog/create-municipality-dialog.component';
+import { EditMunicipalityDialogComponent } from './admin/municipalities/dialogs/edit-municipality-dialog/edit-municipality-dialog.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -97,7 +120,6 @@ const routes: Routes = [
         RegisterComponent,
         HomeComponent,
         ProductCardComponent,
-        ProductCategoryComponent,
         FooterComponent,
         AdminComponent,
         AdminElectronicsComponent,
@@ -109,13 +131,30 @@ const routes: Routes = [
         AdminSmartphonesComponent,
         DashboardComponent,
         ShoppingCartComponent,
-        EntityTableComponent,
         ProfileComponent,
         EditProfileComponent,
         MyOrdersComponent,
         SecurityComponent,
         AddressesComponent,
         ResetPasswordComponent,
+        UsersComponent,
+        CreateUserDialogComponent,
+        EditUserDialogComponent,
+        DeleteDialogComponent,
+        CategoriesComponent,
+        CreateCategoryDialogComponent,
+        EditCategoryDialogComponent,
+        CitiesComponent,
+        CountriesComponent,
+        MunicipalitiesComponent,
+        SubCategoriesComponent,
+        ProductBrandsComponent,
+        ProductModelsComponent,
+        ProductCategoryComponent,
+        EditCountryDialogComponent,
+        CreateCountryDialogComponent,
+        CreateMunicipalityDialogComponent,
+        EditMunicipalityDialogComponent
     ],
     imports: [
         RouterModule.forRoot(routes),
@@ -139,7 +178,11 @@ const routes: Routes = [
         MatTooltipModule,
         MatDatepickerModule,
         MatNativeDateModule,
-        MatStepperModule
+        MatStepperModule,
+        MatDialogModule,
+        HttpClientModule,
+        MatSnackBarModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

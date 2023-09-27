@@ -1,0 +1,37 @@
+<div class="main-content">
+    <div class="user">
+        <h3>Editing user</h3>
+    </div>
+    <form [formGroup]="form">
+        <div formGroupName="user">
+
+            <mat-form-field class="example-full-width" tabindex="2">
+                <mat-label>First Name</mat-label>
+                <input formControlName="firstName" matInput type="text" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" tabindex="2">
+                <mat-label>Last Name</mat-label>
+                <input formControlName="lastName" matInput type="text" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" tabindex="2">
+                <mat-label>Phone number</mat-label>
+                <input formControlName="phoneNumber" matInput type="tel">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" tabindex="2">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" matInput type="email" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" tabindex="2">
+                <mat-label>Username</mat-label>
+                <input formControlName="username" matInput type="text" required>
+            </mat-form-field>
+        </div>
+        <div>
+            <button class="crud-user" color="primary" mat-raised-button (click)="editUser()">Save</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+mat-form-field {
+    margin-right: 20px;
+}
+
+.main-content {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mat-checkbox-checked.mat-accent {
+    .mat-checkbox-ripple .mat-ripple-element {
+        background-color: #f18c24 !important;
+    }
+
+    .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+        background-color: #f18c24;
+    }
+}
+
+.mat-checkbox.mat-accent {
+    .mat-checkbox-ripple .mat-ripple-element {
+        background-color: #f18c24 !important;
+    }
+}
+
+.crud-user {
+    background-color:  #f18c24;
+}
+
+.crud-user button:hover {
+    transform: scale(0.9);
+    transition: .3s;
+}
