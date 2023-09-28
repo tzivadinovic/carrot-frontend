@@ -40,6 +40,13 @@ export interface MunicipalityControllerServiceInterface {
     getAllMunicipalities(q?: string, sort?: string, extraHttpRequestParams?: any): Observable<Array<Municipality>>;
 
     /**
+     * getAllMunicipalitiesByCityId
+     * 
+     * @param cityId cityId
+     */
+    getAllMunicipalitiesByCityId(cityId: number, extraHttpRequestParams?: any): Observable<Array<Municipality>>;
+
+    /**
      * getMunicipalityById
      * 
      * @param municipalityId municipalityId

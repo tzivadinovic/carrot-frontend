@@ -48,7 +48,6 @@ import {MyOrdersComponent} from './auth/profile/my-orders/my-orders.component';
 import {SecurityComponent} from './auth/profile/security/security.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
-import {AddressesComponent} from './auth/profile/addresses/addresses.component';
 import {ResetPasswordComponent} from './auth/login/reset-password/reset-password.component';
 import {MatStepperModule} from "@angular/material/stepper";
 import {UsersComponent} from "./admin/users/users.component";
@@ -76,6 +75,12 @@ import { EditCountryDialogComponent } from './admin/countries/dialogs/edit-count
 import { CreateCountryDialogComponent } from './admin/countries/dialogs/create-country-dialog/create-country-dialog.component';
 import { CreateMunicipalityDialogComponent } from './admin/municipalities/dialogs/create-municipality-dialog/create-municipality-dialog.component';
 import { EditMunicipalityDialogComponent } from './admin/municipalities/dialogs/edit-municipality-dialog/edit-municipality-dialog.component';
+import { CreateCityDialogComponent } from './admin/cities/dialogs/create-city-dialog/create-city-dialog.component';
+import { EditCityDialogComponent } from './admin/cities/dialogs/edit-city-dialog/edit-city-dialog.component';
+import {MatSelectModule} from "@angular/material/select";
+import { AdminAddressesComponent } from './admin/admin-addresses/admin-addresses.component';
+import { CreateAdminAddressesComponent } from './admin/admin-addresses/dialogs/create-admin-addresses/create-admin-addresses.component';
+import { EditAdminAddressesComponent } from './admin/admin-addresses/dialogs/edit-admin-addresses/edit-admin-addresses.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -135,7 +140,6 @@ const routes: Routes = [
         EditProfileComponent,
         MyOrdersComponent,
         SecurityComponent,
-        AddressesComponent,
         ResetPasswordComponent,
         UsersComponent,
         CreateUserDialogComponent,
@@ -154,7 +158,12 @@ const routes: Routes = [
         EditCountryDialogComponent,
         CreateCountryDialogComponent,
         CreateMunicipalityDialogComponent,
-        EditMunicipalityDialogComponent
+        EditMunicipalityDialogComponent,
+        CreateCityDialogComponent,
+        EditCityDialogComponent,
+        AdminAddressesComponent,
+        CreateAdminAddressesComponent,
+        EditAdminAddressesComponent
     ],
     imports: [
         RouterModule.forRoot(routes),
@@ -182,7 +191,8 @@ const routes: Routes = [
         MatDialogModule,
         HttpClientModule,
         MatSnackBarModule,
-        FormsModule
+        FormsModule,
+        MatSelectModule
     ],
     providers: [],
     bootstrap: [AppComponent]

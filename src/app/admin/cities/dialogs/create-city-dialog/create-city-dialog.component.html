@@ -1,0 +1,29 @@
+<div class="main-content">
+    <div class="user">
+        <h3>Creating new city</h3>
+    </div>
+    <form [formGroup]="form">
+
+        <mat-form-field class="example-full-width" tabindex="2">
+            <mat-label>City name</mat-label>
+            <input formControlName="name" matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" tabindex="2">
+            <mat-label>Zip code</mat-label>
+            <input formControlName="zipCode" matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Country</mat-label>
+            <mat-select formControlName="country" required>
+                <mat-option *ngFor="let country of countries" [value]="country">
+                    {{country?.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div>
+            <button class="crud-user" color="primary" mat-raised-button (click)="createCity()">Save</button>
+        </div>
+    </form>
+</div>

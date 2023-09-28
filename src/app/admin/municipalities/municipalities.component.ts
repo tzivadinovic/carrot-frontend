@@ -23,7 +23,7 @@ import {
 })
 export class MunicipalitiesComponent implements OnInit, AfterViewInit {
     municipalities: Municipality[] = [];
-    displayedColumns: string[] = ['id', 'name', 'country', 'options'];
+    displayedColumns: string[] = ['id', 'name', 'city', 'options'];
     dataSource = new MatTableDataSource<Municipality>([]);
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
@@ -93,5 +93,4 @@ export class MunicipalitiesComponent implements OnInit, AfterViewInit {
             }
         });
     }
-
 }

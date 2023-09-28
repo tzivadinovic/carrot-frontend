@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-delete-dialog',
+  selector: 'app-delete-dialogs',
   templateUrl: './delete-dialog.component.html',
   styleUrls: ['./delete-dialog.component.css']
 })

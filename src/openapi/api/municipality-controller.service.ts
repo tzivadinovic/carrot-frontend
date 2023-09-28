@@ -186,6 +186,58 @@ export class MunicipalityControllerService implements MunicipalityControllerServ
     }
 
     /**
+     * getAllMunicipalitiesByCityId
+     * @param cityId cityId
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public getAllMunicipalitiesByCityId(cityId: number, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<Array<Municipality>>;
+    public getAllMunicipalitiesByCityId(cityId: number, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpResponse<Array<Municipality>>>;
+    public getAllMunicipalitiesByCityId(cityId: number, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: '*/*'}): Observable<HttpEvent<Array<Municipality>>>;
+    public getAllMunicipalitiesByCityId(cityId: number, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: '*/*'}): Observable<any> {
+        if (cityId === null || cityId === undefined) {
+            throw new Error('Required parameter cityId was null or undefined when calling getAllMunicipalitiesByCityId.');
+        }
+
+        let queryParameters = new HttpParams({encoder: this.encoder});
+        if (cityId !== undefined && cityId !== null) {
+          queryParameters = this.addToHttpParams(queryParameters,
+            <any>cityId, 'cityId');
+        }
+
+        let headers = this.defaultHeaders;
+
+        let httpHeaderAcceptSelected: string | undefined = options && options.httpHeaderAccept;
+        if (httpHeaderAcceptSelected === undefined) {
+            // to determine the Accept header
+            const httpHeaderAccepts: string[] = [
+                '*/*'
+            ];
+            httpHeaderAcceptSelected = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        }
+        if (httpHeaderAcceptSelected !== undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+
+        let responseType_: 'text' | 'json' = 'json';
+        if(httpHeaderAcceptSelected && httpHeaderAcceptSelected.startsWith('text')) {
+            responseType_ = 'text';
+        }
+
+        return this.httpClient.get<Array<Municipality>>(`${this.configuration.basePath}/municipalities/municipalities-by-city`,
+            {
+                params: queryParameters,
+                responseType: <any>responseType_,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
      * getMunicipalityById
      * @param municipalityId municipalityId
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.

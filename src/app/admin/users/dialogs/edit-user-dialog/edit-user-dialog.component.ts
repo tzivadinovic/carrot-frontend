@@ -5,7 +5,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {SnackbarService} from "../../../../../util/snackbar-handler";
 
 @Component({
-    selector: 'app-edit-user-dialog',
+    selector: 'app-edit-user-dialogs',
     templateUrl: './edit-user-dialog.component.html',
     styleUrls: ['./edit-user-dialog.component.css']
 })

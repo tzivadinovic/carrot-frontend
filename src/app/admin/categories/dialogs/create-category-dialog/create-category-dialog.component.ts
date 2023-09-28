@@ -1,11 +1,11 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
-import {Municipality, CategoryControllerService} from "../../../../../openapi";
+import {Municipality, CategoryControllerService, Category} from "../../../../../openapi";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {SnackbarService} from "../../../../../util/snackbar-handler";
 
 @Component({
-    selector: 'app-create-category-dialog',
+    selector: 'app-create-category-dialogs',
     templateUrl: './create-category-dialog.component.html',
     styleUrls: ['./create-category-dialog.component.css']
 })
@@ -17,7 +17,7 @@ export class CreateCategoryDialogComponent implements OnInit {
 
     constructor(private categoryService: CategoryControllerService,
                 private dialogRef: MatDialogRef<CreateCategoryDialogComponent>,
-                @Inject(MAT_DIALOG_DATA) public data: Municipality,
+                @Inject(MAT_DIALOG_DATA) public data: Category,
                 private snackBarService: SnackbarService) {
     }
 

@@ -1,0 +1,55 @@
+<div class="main-content">
+    <div class="user">
+        <h3>Creating new address</h3>
+    </div>
+    <form [formGroup]="form">
+        <mat-form-field class="example-full-width">
+            <mat-label>User</mat-label>
+            <mat-select formControlName="user" required>
+                <mat-option *ngFor="let user of users" [value]="user">
+                    {{user?.username}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" tabindex="2">
+            <mat-label>Street</mat-label>
+            <input formControlName="street" matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" tabindex="2">
+            <mat-label>House number</mat-label>
+            <input formControlName="number" matInput type="number" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Country</mat-label>
+            <mat-select formControlName="country" required [(ngModel)]="selectedCountry" (selectionChange)="onCountrySelectionChange()">
+                <mat-option *ngFor="let country of countries" [value]="country">
+                    {{country?.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>City</mat-label>
+            <mat-select formControlName="city" required [(ngModel)]="selectedCity" (selectionChange)="onCitySelectionChange()">
+                <mat-option *ngFor="let city of filteredCities" [value]="city">
+                    {{city?.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Municipality</mat-label>
+            <mat-select formControlName="municipality" required [(ngModel)]="selectedMunicipality">
+                <mat-option *ngFor="let municipality of filteredMunicipalities" [value]="municipality">
+                    {{municipality?.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div>
+            <button class="crud-user" color="primary" mat-raised-button (click)="createAddress()">Save</button>
+        </div>
+    </form>
+</div>

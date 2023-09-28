@@ -5,7 +5,7 @@ import {User, UserControllerService} from "../../../../../openapi";
 import {SnackbarService} from "../../../../../util/snackbar-handler";
 
 @Component({
-    selector: 'app-create-user-dialog',
+    selector: 'app-create-user-dialogs',
     templateUrl: './create-user-dialog.component.html',
     styleUrls: ['./create-user-dialog.component.css']
 })
