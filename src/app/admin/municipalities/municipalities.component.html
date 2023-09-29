@@ -1,4 +1,4 @@
-<div class="main-content">
+<div class="generic-page-wrapper">
     <mat-form-field class="search-field">
         <mat-label>Search...</mat-label>
         <input matInput #inputPar type="text" (keyup)="searchMunicipality(inputPar.value)">
@@ -24,11 +24,13 @@
             <ng-container matColumnDef="options">
                 <th mat-header-cell *matHeaderCellDef> Actions</th>
                 <td mat-cell *matCellDef="let municipality" class="actions-field">
-                    <button mat-raised-button color="primary" class="edit-button"
-                            (click)="openEditMunicipalityDialog(municipality)">Edit
+                    <button mat-raised-button color="primary" class="table-action-button"
+                            (click)="openEditMunicipalityDialog(municipality)">
+                        <mat-icon color="accent">edit</mat-icon>
                     </button>
-                    <button mat-raised-button color="primary" class="delete-button"
-                            (click)="openDeleteMunicipalityDialog(municipality?.id)">Delete
+                    <button mat-raised-button color="primary" class="table-action-button"
+                            (click)="openDeleteMunicipalityDialog(municipality?.id)">
+                        <mat-icon color="accent">delete</mat-icon>
                     </button>
                 </td>
             </ng-container>

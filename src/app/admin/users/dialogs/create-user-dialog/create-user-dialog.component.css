@@ -1,3 +1,5 @@
+@import '../../../../../styles.scss';
+
 mat-form-field {
     margin-right: 20px;
 }
@@ -31,3 +33,21 @@ mat-form-field {
     transform: scale(0.9);
     transition: .3s;
 }
+
+/*form, .user-info {*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: .25rem;*/
+/*    justify-content: flex-start;*/
+/*}*/
+
+.crud-user{
+    justify-self: center;
+}
+
+.is-admin{
+    justify-content: flex-start;
+    display: flex;
+}
+

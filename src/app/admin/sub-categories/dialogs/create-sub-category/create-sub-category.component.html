@@ -1,0 +1,24 @@
+<div class="main-content">
+    <div class="user">
+        <h3>Creating new sub category</h3>
+    </div>
+    <form [formGroup]="form"  class="generic-dialog-form">
+
+        <mat-form-field class="example-full-width" tabindex="2">
+            <mat-label>Sub category</mat-label>
+            <input formControlName="name" matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Main category</mat-label>
+            <mat-select formControlName="category" required>
+                <mat-option *ngFor="let category of categories" [value]="category">
+                    {{category?.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div>
+            <button class="crud-user" color="primary" mat-raised-button (click)="createSubCategory()">Save</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,15 @@
+<div class="main-content">
+    <div class="user">
+        <h3>Editing product brand</h3>
+    </div>
+    <form [formGroup]="form"  class="generic-dialog-form">
+
+        <mat-form-field class="example-full-width" tabindex="2">
+            <mat-label>Brand name</mat-label>
+            <input formControlName="name" matInput type="text" required>
+        </mat-form-field>
+        <div>
+            <button class="crud-user" color="primary" mat-raised-button (click)="editProductBrand()">Save</button>
+        </div>
+    </form>
+</div>

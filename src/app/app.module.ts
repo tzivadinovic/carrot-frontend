@@ -26,13 +26,13 @@ import {MatMenuModule} from "@angular/material/menu";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {FooterComponent} from './common/footer/footer.component';
 import {AdminComponent} from './admin/admin.component';
-import {AdminElectronicsComponent} from './admin/products/admin-electronics/admin-electronics.component';
-import {AdminGamingComponent} from './admin/products/admin-gaming/admin-gaming.component';
-import {AdminLaptopsComponent} from './admin/products/admin-laptops/admin-laptops.component';
-import {AdminNetworkComponent} from './admin/products/admin-network/admin-network.component';
-import {AdminPcComponentsComponent} from './admin/products/admin-pc-components/admin-pc-components.component';
-import {AdminPeripheralsComponent} from './admin/products/admin-peripherals/admin-peripherals.component';
-import {AdminSmartphonesComponent} from './admin/products/admin-smartphones/admin-smartphones.component';
+import {AdminElectronicsComponent} from './admin/product-related/admin-electronics/admin-electronics.component';
+import {AdminGamingComponent} from './admin/product-related/admin-gaming/admin-gaming.component';
+import {AdminLaptopsComponent} from './admin/product-related/admin-laptops/admin-laptops.component';
+import {AdminNetworkComponent} from './admin/product-related/admin-network/admin-network.component';
+import {AdminPcComponentsComponent} from './admin/product-related/admin-pc-components/admin-pc-components.component';
+import {AdminPeripheralsComponent} from './admin/product-related/admin-peripherals/admin-peripherals.component';
+import {AdminSmartphonesComponent} from './admin/product-related/admin-smartphones/admin-smartphones.component';
 import {DashboardComponent} from './admin/dashboard/dashboard.component';
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatCheckboxModule} from "@angular/material/checkbox";
@@ -68,9 +68,9 @@ import {CitiesComponent} from './admin/cities/cities.component';
 import {CountriesComponent} from './admin/countries/countries.component';
 import {MunicipalitiesComponent} from './admin/municipalities/municipalities.component';
 import {SubCategoriesComponent} from './admin/sub-categories/sub-categories.component';
-import {ProductBrandsComponent} from "./admin/products/product-brands/product-brands.component";
-import {ProductModelsComponent} from "./admin/products/product-models/product-models.component";
-import {ProductCategoryComponent} from './admin/products/product-category/product-category.component';
+import {ProductBrandsComponent} from "./admin/product-related/product-brands/product-brands.component";
+import {ProductModelsComponent} from "./admin/product-related/product-models/product-models.component";
+import {ProductCategoryComponent} from './admin/product-related/product-category/product-category.component';
 import { EditCountryDialogComponent } from './admin/countries/dialogs/edit-country-dialog/edit-country-dialog.component';
 import { CreateCountryDialogComponent } from './admin/countries/dialogs/create-country-dialog/create-country-dialog.component';
 import { CreateMunicipalityDialogComponent } from './admin/municipalities/dialogs/create-municipality-dialog/create-municipality-dialog.component';
@@ -81,6 +81,15 @@ import {MatSelectModule} from "@angular/material/select";
 import { AdminAddressesComponent } from './admin/admin-addresses/admin-addresses.component';
 import { CreateAdminAddressesComponent } from './admin/admin-addresses/dialogs/create-admin-addresses/create-admin-addresses.component';
 import { EditAdminAddressesComponent } from './admin/admin-addresses/dialogs/edit-admin-addresses/edit-admin-addresses.component';
+import { CreateProductBrandComponent } from './admin/product-related/product-brands/dialogs/create-product-brand/create-product-brand.component';
+import { EditProductBrandComponent } from './admin/product-related/product-brands/dialogs/edit-product-brand/edit-product-brand.component';
+import { CreateProductModelComponent } from './admin/product-related/product-models/dialogs/create-product-model/create-product-model.component';
+import { EditProductModelComponent } from './admin/product-related/product-models/dialogs/edit-product-model/edit-product-model.component';
+import { CreateSubCategoryComponent } from './admin/sub-categories/dialogs/create-sub-category/create-sub-category.component';
+import { EditSubCategoryComponent } from './admin/sub-categories/dialogs/edit-sub-category/edit-sub-category.component';
+import { ProductsComponent } from './admin/product-related/products/products.component';
+import { CreateProductComponent } from './admin/product-related/products/dialogs/create-product/create-product.component';
+import { EditProductComponent } from './admin/product-related/products/dialogs/edit-product/edit-product.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -163,7 +172,16 @@ const routes: Routes = [
         EditCityDialogComponent,
         AdminAddressesComponent,
         CreateAdminAddressesComponent,
-        EditAdminAddressesComponent
+        EditAdminAddressesComponent,
+        CreateProductBrandComponent,
+        EditProductBrandComponent,
+        CreateProductModelComponent,
+        EditProductModelComponent,
+        CreateSubCategoryComponent,
+        EditSubCategoryComponent,
+        ProductsComponent,
+        CreateProductComponent,
+        EditProductComponent
     ],
     imports: [
         RouterModule.forRoot(routes),

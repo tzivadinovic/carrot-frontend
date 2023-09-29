@@ -20,6 +20,5 @@ export interface SubCategory {
     lastModifiedDate?: string;
     name?: string;
     recordStatus?: number;
-    subCategory?: SubCategory;
 }
 

@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {Municipality, CategoryControllerService} from "../../../openapi";
+import {CategoryControllerService, Category} from "../../../openapi";
 import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
@@ -16,9 +16,9 @@ import {EditCategoryDialogComponent} from "./dialogs/edit-category-dialog/edit-c
     styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit, AfterViewInit {
-    categories: Municipality[] = [];
+    categories: Category[] = [];
     displayedColumns: string[] = ['id', 'name', 'options'];
-    dataSource = new MatTableDataSource<Municipality>([]);
+    dataSource = new MatTableDataSource<Category>([]);
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 
@@ -59,7 +59,7 @@ export class CategoriesComponent implements OnInit, AfterViewInit {
         });
     }
 
-    openEditCategoryDialog(category: Municipality): void {
+    openEditCategoryDialog(category: Category): void {
         const dialogConfig = this.dialog.open(EditCategoryDialogComponent, {
             width: '500px',
             data: category

@@ -1,1 +1,47 @@
-<p>sub-categories works!</p>
+<div class="generic-page-wrapper">
+    <mat-form-field class="search-field">
+        <mat-label>Search...</mat-label>
+        <input matInput #inputPar type="text" (keyup)="searchSubCategory(inputPar.value)">
+    </mat-form-field>
+    <div>
+        <table mat-table [dataSource]="dataSource">
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> ID</th>
+                <td mat-cell *matCellDef="let subCategory"> {{subCategory?.id}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Sub category</th>
+                <td mat-cell *matCellDef="let subCategory"> {{subCategory?.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="category">
+                <th mat-header-cell *matHeaderCellDef> Main category</th>
+                <td mat-cell *matCellDef="let subCategory"> {{subCategory?.category?.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="options">
+                <th mat-header-cell *matHeaderCellDef> Actions</th>
+                <td mat-cell *matCellDef="let category" class="actions-field">
+                    <button mat-raised-button color="primary" class="table-action-button" (click)="openEditSubCategoryDialog(category)">
+                        <mat-icon color="accent">edit</mat-icon>
+                    </button>
+                    <button mat-raised-button color="primary" class="table-action-button" (click)="openDeleteCategoryDialog(category?.id)">
+                        <mat-icon color="accent">delete</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[15, 10, 20]"
+                       showFirstLastButtons
+                       aria-label="Select page of periodic elements" class="paginator">
+        </mat-paginator>
+    </div>
+    <button class="color-secondary add-btn" mat-fab id="button2" (click)="openCreateSubCategoryDialog()">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>

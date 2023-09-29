@@ -1,0 +1,72 @@
+.main-content {
+    margin-top: 2%;
+}
+
+table {
+    width: 50%;
+    margin: 0 auto 0;
+    background-color: #D8DEE9;
+}
+
+td {
+    padding: 0.5rem;
+    width: 10%;
+}
+
+tr {
+    height: 30px !important;
+}
+
+th {
+    padding: 0.5rem;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    background-color: #f18c24;
+}
+
+tr:hover {
+    background-color: rgba(46, 52, 64, 0.1);
+    transition: .3s;
+}
+
+.paginator {
+    width: 49.99%;
+    margin-left: 25%;
+    background-color: #D8DEE9;
+}
+
+.add-btn {
+    margin-left: 70%;
+    margin-top: 20px;
+    outline: none;
+    background-color: #f18c24;
+    box-shadow: none;
+    animation: ease-in-out;
+    transition: .3s;
+}
+
+.search-field {
+    margin-left: 55%;
+    width: 20%;
+}
+
+.search-field mat-label {
+    font-weight: 500;
+    color: #2E3440;
+}
+
+.edit-button {
+    background-color: #f18c24;
+}
+
+.delete-button {
+    background-color: #f18c24;
+}
+
+.actions-field button {
+    margin-right: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}

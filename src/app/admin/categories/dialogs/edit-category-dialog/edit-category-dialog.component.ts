@@ -1,6 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
-import {Municipality, CategoryControllerService, User} from "../../../../../openapi";
+import {Municipality, CategoryControllerService, User, Category} from "../../../../../openapi";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {SnackbarService} from "../../../../../util/snackbar-handler";
 
@@ -15,12 +15,12 @@ export class EditCategoryDialogComponent implements OnInit {
         name: new FormControl(null)
     });
 
-    category: Municipality;
-    categories: Municipality[] = [];
+    category: Category;
+    categories: Category[] = [];
 
     constructor(private categoryService: CategoryControllerService,
                 private dialogRef: MatDialogRef<EditCategoryDialogComponent>,
-                @Inject(MAT_DIALOG_DATA) public data: Municipality,
+                @Inject(MAT_DIALOG_DATA) public data: Category,
                 private snackBarService: SnackbarService) {
         this.category = data;
     }
@@ -30,7 +30,7 @@ export class EditCategoryDialogComponent implements OnInit {
     }
 
     editCategory() {
-        const category: Municipality = this.form.value;
+        const category: Category = this.form.value;
         category.id = this.data.id;
         if (this.form.valid) {
             this.categoryService.updateCategory(category).subscribe(() => {

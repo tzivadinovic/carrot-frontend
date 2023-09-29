@@ -2,8 +2,8 @@
     <div class="user">
         <h3>Creating new user</h3>
     </div>
-    <form [formGroup]="form">
-        <div formGroupName="user">
+    <form [formGroup]="form" class="generic-dialog-form">
+        <div formGroupName="user" class="generic-dialog-form">
 
             <mat-form-field class="example-full-width" tabindex="2">
                 <mat-label>First Name</mat-label>
@@ -31,7 +31,7 @@
             </mat-form-field>
         </div>
 
-        <mat-checkbox formControlName="isAdmin" class="example-margin" [checked]="false">Admin</mat-checkbox>
+        <mat-checkbox formControlName="isAdmin" class="example-margin is-admin" [checked]="false">Admin</mat-checkbox>
 
         <div>
             <button class="crud-user" color="primary" mat-raised-button (click)="createUser()">Save</button>
