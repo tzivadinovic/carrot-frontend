@@ -3,7 +3,7 @@
 }
 
 table {
-    width: 90%;
+    width: 50%;
     margin: 0 auto 0;
     background-color: #D8DEE9;
 }
@@ -32,13 +32,13 @@ tr:hover {
 }
 
 .paginator {
-    width: 89.99%;
-    margin-left: 5%;
+    width: 49.99%;
+    margin-left: 25%;
     background-color: #D8DEE9;
 }
 
 .add-btn {
-    margin-left: 90%;
+    margin-left: 70%;
     margin-top: 20px;
     outline: none;
     background-color: #f18c24;
@@ -47,10 +47,8 @@ tr:hover {
     transition: .3s;
 }
 
-
-
 .search-field {
-    margin-left: 75%;
+    margin-left: 55%;
     width: 20%;
 }
 

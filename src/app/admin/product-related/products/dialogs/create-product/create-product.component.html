@@ -1,1 +1,71 @@
-<p>create-product works!</p>
+<div class="main-content">
+    <div class="user">
+        <h3>Creating new product</h3>
+    </div>
+    <form [formGroup]="form" class="generic-dialog-form">
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="category" required [(ngModel)]="selectedCategory" (selectionChange)="onCategorySelectionChange()">
+                <mat-option *ngFor="let category of categories" [value]="category">
+                    {{category?.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Sub category</mat-label>
+            <mat-select formControlName="subCategory" required>
+                <mat-option *ngFor="let subCategory of filteredSubCategories" [value]="subCategory">
+                    {{subCategory?.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Product brand</mat-label>
+            <mat-select formControlName="productBrand" required [(ngModel)]="selectedProductBrand" (selectionChange)="onProductBrandSelectionChange()">
+                <mat-option *ngFor="let productBrand of productBrands" [value]="productBrand">
+                    {{productBrand?.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Product model</mat-label>
+            <mat-select formControlName="productModel" required>
+                <mat-option *ngFor="let productModel of filteredProductModels" [value]="productModel">
+                    {{productModel?.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" tabindex="2">
+            <mat-label>Product name</mat-label>
+            <input formControlName="name" matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" tabindex="2">
+            <mat-label>In stock</mat-label>
+            <input formControlName="stock" matInput type="number" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" tabindex="2">
+            <mat-label>Price</mat-label>
+            <input formControlName="price" matInput type="number" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" tabindex="2">
+            <mat-label>Discount price</mat-label>
+            <input formControlName="discountPrice" matInput type="number">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" tabindex="2">
+            <mat-label>EAN</mat-label>
+            <input formControlName="ean" matInput type="text">
+        </mat-form-field>
+        <div>
+            <button class="crud-user" color="primary" mat-raised-button (click)="createProduct()">Save</button>
+        </div>
+    </form>
+</div>
